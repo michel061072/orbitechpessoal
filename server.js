@@ -59,7 +59,9 @@ app.post('/api/orders', async (req,res)=>{
 });
 
 app.post('/api/admin/login', async (req,res)=>{
-  const {usuario, senha} = req.body || {};
+  const usuario = req.body.usuario || req.body.user || req.body.username || '';
+  const senha = req.body.senha || req.body.password || '';
+
   const okUser = String(usuario||'') === ADMIN_USER;
   const okPass = await bcrypt.compare(String(senha||''), await bcrypt.hash(ADMIN_PASSWORD, 10));
   if(!okUser || !okPass) return res.status(401).json({erro:'Usuário ou senha incorretos.'});
@@ -79,5 +81,82 @@ app.patch('/api/admin/orders/:numero', requireAdmin, async (req,res)=>{
   if(!o) return res.status(404).json({erro:'Pedido não encontrado.'});
   o.status = status; o.atualizadoEm = new Date().toISOString(); await writeJson(ordersFile, orders);
   res.json(o);
+});
+// ===== ADMIN PRODUTOS =====
+
+app.get('/api/admin/products', requireAdmin, async (req, res) => {
+  res.json(await readJson(productsFile, []));
+});
+
+app.post('/api/admin/products', requireAdmin, async (req, res) => {
+  const produtos = await readJson(productsFile, []);
+
+  const novo = {
+    id: Date.now(),
+    nome: clean(req.body.nome),
+    categoria: clean(req.body.categoria),
+    preco: Number(req.body.preco),
+    imagem: clean(req.body.imagem)
+  };
+
+  if (!novo.nome || !novo.categoria || !novo.preco || !novo.imagem) {
+    return res.status(400).json({ erro: 'Preencha todos os campos.' });
+  }
+
+  produtos.push(novo);
+  await writeJson(productsFile, produtos);
+
+  res.status(201).json(novo);
+});
+
+app.put('/api/admin/products/:id', requireAdmin, async (req, res) => {
+  const produtos = await readJson(productsFile, []);
+  const id = Number(req.params.id);
+
+  const produto = produtos.find(p => Number(p.id) === id);
+
+  if (!produto) {
+    return res.status(404).json({ erro: 'Produto não encontrado.' });
+  }
+
+  produto.nome = clean(req.body.nome);
+  produto.categoria = clean(req.body.categoria);
+  produto.preco = Number(req.body.preco);
+  produto.imagem = clean(req.body.imagem);
+
+  await writeJson(productsFile, produtos);
+
+  res.json(produto);
+});
+
+app.delete('/api/admin/products/:id', requireAdmin, async (req, res) => {
+  let produtos = await readJson(productsFile, []);
+  const id = Number(req.params.id);
+
+  produtos = produtos.filter(p => Number(p.id) !== id);
+
+  await writeJson(productsFile, produtos);
+
+  res.json({ ok: true });
+});
+
+const multer = require('multer');
+
+
+const storage = multer.diskStorage({
+  destination: function(req, file, cb) {
+   cb(null, path.join(__dirname, 'assets', 'uploads'));
+  },
+
+  filename: function(req, file, cb) {
+    cb(null, Date.now() + path.extname(file.originalname));
+  }
+});
+
+const upload = multer({ storage });
+app.post('/api/upload', requireAdmin, upload.single('imagem'), (req, res) => {
+  res.json({
+    caminho: `assets/uploads/${req.file.filename}`
+  });
 });
 app.listen(PORT, ()=>console.log(`Orbitech rodando em http://localhost:${PORT}`));

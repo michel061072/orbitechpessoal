@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Produtos - Orbitech</title>
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <main class="admin">
+    <h1>Produtos</h1>
+
+    <a href="/admin/painel.html">Voltar para pedidos</a>
+
+    <section class="card">
+      <h2>Novo / Editar produto</h2>
+
+      <input type="hidden" id="produtoId">
+
+      <input id="nome" placeholder="Nome do produto">
+      <input id="categoria" placeholder="Categoria">
+      <input id="preco" type="number" step="0.01" placeholder="Preço">
+      <input type="file" id="imagemArquivo" accept="image/*">
+
+      <button onclick="salvarProduto()">Salvar produto</button>
+      <button onclick="limparFormulario()">Limpar</button>
+    </section>
+
+    <section class="card">
+      <h2>Lista de produtos</h2>
+      <div id="listaProdutosAdmin"></div>
+    </section>
+  </main>
+
+  <script src="produtos.js"></script>
+</body>
+</html>
