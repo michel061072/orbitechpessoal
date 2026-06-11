@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todos os Produtos | Orbitech Variedades</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="topo">
+  <span>PIX manual</span>
+  <span>WhatsApp: (11) 95281-6070</span>
+</div>
+
+<header class="header">
+  <a class="marca" href="index.html">
+    <img src="assets/img/logo.png" alt="Orbitech Variedades">
+    <div>
+      <strong>Orbitech</strong>
+      <small>Variedades</small>
+    </div>
+  </a>
+
+  <nav id="menu">
+    <a class="ativo" href="index.html">Início</a>
+    <a class="" href="perfumes.html">Perfumes</a>
+    <a class="" href="bones.html">Bonés</a>
+    <a class="" href="hidratantes.html">Hidratantes</a>
+    <a href="#pix">PIX</a>
+  </nav>
+
+  <button class="menu-mobile" onclick="toggleMenu()">☰</button>
+
+  <button class="btn-carrinho" onclick="abrirCarrinho()">
+    Carrinho <span id="contador">0</span>
+  </button>
+</header>
+
+
+<section class="hero" id="inicio">
+  <div class="hero-texto">
+    <p class="tag">Orbitech Variedades</p>
+    <h1>Perfumes, bonés e produtos premium.</h1>
+    <p>Compre pelo site, pague no PIX e envie o comprovante pelo WhatsApp.</p>
+    <div class="acoes">
+      <a href="#produtos" class="btn principal">Ver produtos</a>
+      <a href="https://wa.me/5511952816070" class="btn secundario" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+
+  <div class="hero-card">
+    <img src="assets/img/logo.png" alt="Logo Orbitech">
+    <h2>Azul + Cinza</h2>
+    <p>Loja online moderna e responsiva.</p>
+  </div>
+</section>
+
+<section class="beneficios">
+  <div><strong>Pagamento PIX</strong><span>Chave copiada no checkout</span></div>
+  <div><strong>Pedido automático</strong><span>Mensagem pronta no WhatsApp</span></div>
+  <div><strong>Mobile first</strong><span>Feito para celular e desktop</span></div>
+</section>
+
+
+<section class="produtos-section" id="produtos">
+  <div class="titulo">
+    <div>
+      <p class="tag">Catálogo</p>
+      <h2>Todos os Produtos</h2>
+      <p class="subtitulo">Todos os produtos da Orbitech em uma página.</p>
+    </div>
+
+    <div class="filtros">
+      <a href="index.html" class="btn-categoria ativo">Todos</a>
+      <a href="perfumes.html" class="btn-categoria ">Perfumes</a>
+      <a href="bones.html" class="btn-categoria ">Bonés</a>
+      <a href="hidratantes.html" class="btn-categoria ">Hidratantes</a>
+    </div>
+  </div>
+
+  <input class="busca" type="text" id="busca" placeholder="Buscar produto..." oninput="renderizarProdutos()">
+
+  <div class="grid" id="listaProdutos"></div>
+</section>
+
+<section class="pix" id="pix">
+  <div>
+    <p class="tag">Finalização</p>
+    <h2>Pagamento via PIX</h2>
+    <p>Depois de adicionar os produtos ao carrinho, copie a chave PIX e envie o comprovante no WhatsApp.</p>
+  </div>
+
+  <div class="pix-box">
+    <span>Chave PIX</span>
+    <strong>31971009562</strong>
+    <small>Recebedor:Jonatan Robert Dos Reis Lima</small>
+    <button onclick="copiarPix()">Copiar chave PIX</button>
+  </div>
+</section>
+
+<aside class="carrinho" id="carrinho">
+  <div class="carrinho-topo">
+    <h2>Seu carrinho</h2>
+    <button onclick="fecharCarrinho()">×</button>
+  </div>
+
+  <div id="itensCarrinho" class="itens"></div>
+
+  <div class="carrinho-final">
+    <div class="total">
+      <span>Total</span>
+      <strong id="totalCarrinho">R$ 0,00</strong>
+    </div>
+
+    <div class="checkout">
+      <h3>PIX manual</h3>
+      <p>Chave PIX:</p>
+      <div class="linha-pix">
+        <input id="pixKey" value="31971009562" readonly>
+        <button onclick="copiarPix()">Copiar</button>
+      </div>
+      <small>Recebedor: Jonatan Robert Dos Reis Lima</small>
+    </div>
+
+    <div class="dados-cliente">
+      <input id="clienteNome" placeholder="Seu nome completo">
+      <input id="clienteTelefone" placeholder="Seu WhatsApp">
+      <textarea id="clienteEndereco" placeholder="Endereço ou observação do pedido"></textarea>
+    </div>
+    <button class="finalizar" onclick="finalizarPedido()">Finalizar pedido seguro</button>
+  </div>
+</aside>
+
+<div class="overlay" id="overlay" onclick="fecharCarrinho()"></div>
+
+<a class="zap" href="https://wa.me/5511952816070" target="_blank">WhatsApp</a>
+
+<footer id="contato">
+  <div>
+    <strong>Orbitech Variedades</strong>
+    <p>@orbitech_variedades</p>
+  </div>
+  <div>
+    <p>WhatsApp: (11) 95281-6070</p>
+    <p>Domínio desejado: orbitechvariedades.com.br</p>
+  </div>
+</footer>
+
+<script>window.CATEGORIA_PAGINA = "";</script>
+<script src="js/script.js"></script>
+</body>
+</html>

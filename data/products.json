@@ -1,0 +1,142 @@
+[
+  {
+    "id": 1,
+    "nome": "Boné Prada Preto",
+    "categoria": "Bonés",
+    "preco": 219.99,
+    "imagem": "assets/img/produto-01.jpg"
+  },
+  {
+    "id": 2,
+    "nome": "Perfume Brand Collection 296",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-02.jpg"
+  },
+  {
+    "id": 3,
+    "nome": "Boné Gucci Faixa Verde e Vermelha",
+    "categoria": "Bonés",
+    "preco": 219.99,
+    "imagem": "assets/img/produto-03.jpg"
+  },
+  {
+    "id": 4,
+    "nome": "Boné Burberry Bege Xadrez",
+    "categoria": "Bonés",
+    "preco": 219.99,
+    "imagem": "assets/img/produto-04.jpg"
+  },
+  {
+    "id": 5,
+    "nome": "Perfume Brand Collection 214",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-05.jpg"
+  },
+  {
+    "id": 6,
+    "nome": "Boné Gucci Preto Premium",
+    "categoria": "Bonés",
+    "preco": 219.99,
+    "imagem": "assets/img/produto-06.jpg"
+  },
+  {
+    "id": 7,
+    "nome": "Perfume Salto Alto Feminino",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-07.jpg"
+  },
+  {
+    "id": 8,
+    "nome": "Perfume Brand Collection 054",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-08.jpg"
+  },
+  {
+    "id": 9,
+    "nome": "Boné Gucci Branco",
+    "categoria": "Bonés",
+    "preco": 219.99,
+    "imagem": "assets/img/produto-09.jpg"
+  },
+  {
+    "id": 10,
+    "nome": "Perfume Brand Collection 007",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-10.jpg"
+  },
+  {
+    "id": 11,
+    "nome": "Perfume Heroine Rose",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-11.jpg"
+  },
+  {
+    "id": 12,
+    "nome": "Boné Gucci Colors",
+    "categoria": "Bonés",
+    "preco": 219.99,
+    "imagem": "assets/img/produto-12.jpg"
+  },
+  {
+    "id": 13,
+    "nome": "Boné Louis Vuitton",
+    "categoria": "Bonés",
+    "preco": 219.99,
+    "imagem": "assets/img/produto-13.jpg"
+  },
+  {
+    "id": 14,
+    "nome": "Boné Prada Nylon Preto",
+    "categoria": "Bonés",
+    "preco": 219.99,
+    "imagem": "assets/img/produto-14.jpg"
+  },
+  {
+    "id": 15,
+    "nome": "Hidratante Angel Isabelle La Belle",
+    "categoria": "Hidratantes",
+    "preco": 189.99,
+    "imagem": "assets/img/produto-15.jpg"
+  },
+  {
+    "id": 16,
+    "nome": "Perfume Brand Collection Crown",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-16.jpg"
+  },
+  {
+    "id": 17,
+    "nome": "Perfume Erba Pura Brand Collection",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-17.jpg"
+  },
+  {
+    "id": 18,
+    "nome": "Perfume Do You Love It? Yes I Do",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-18.jpg"
+  },
+  {
+    "id": 19,
+    "nome": "Perfume Feminino Elegance",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-19.jpg"
+  },
+  {
+    "id": 20,
+    "nome": "Perfume The Most Wanted",
+    "categoria": "Perfumes",
+    "preco": 149.99,
+    "imagem": "assets/img/produto-20.jpg"
+  }
+]

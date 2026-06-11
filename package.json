@@ -1,0 +1,1 @@
+{"scripts":{"start":"node server.js"},"dependencies":{"bcryptjs":"latest","cookie-parser":"latest","csurf":"latest","dotenv":"latest","express":"latest","express-rate-limit":"latest","helmet":"latest"},"devDependencies":{}}

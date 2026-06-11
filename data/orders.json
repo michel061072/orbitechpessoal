@@ -1,0 +1,24 @@
+[
+  {
+    "numero": "ORB-20260611-0001",
+    "criadoEm": "2026-06-11T03:14:34.026Z",
+    "status": "Pendente",
+    "cliente": {
+      "nome": "MICHEL",
+      "telefone": "11987398251",
+      "endereco": ""
+    },
+    "itens": [
+      {
+        "id": 1,
+        "nome": "Boné Prada Preto",
+        "categoria": "Bonés",
+        "preco": 219.99,
+        "qtd": 1,
+        "subtotal": 219.99
+      }
+    ],
+    "total": 219.99,
+    "atualizadoEm": "2026-06-11T03:14:58.707Z"
+  }
+]

@@ -1,0 +1,2 @@
+async function login(){const msg=document.getElementById('msg');msg.textContent='Entrando...';try{const r=await fetch('/api/admin/login',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({usuario:usuario.value,senha:senha.value})});const d=await r.json();if(!r.ok)throw new Error(d.erro);location.href='painel.html'}catch(e){msg.textContent=e.message}}
+document.addEventListener('keydown',e=>{if(e.key==='Enter')login()})
